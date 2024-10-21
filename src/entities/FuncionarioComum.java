@@ -1,6 +1,6 @@
 package entities;
 
-public class FuncionarioComum extends FuncionarioBase {
+public class FuncionarioComum extends FuncionarioBase implements Descontos{
 
     // Construtor Padrao
     public FuncionarioComum(){}
@@ -13,7 +13,22 @@ public class FuncionarioComum extends FuncionarioBase {
     // Implementação do cálculo de salário sem nenhum ajuste adicional
     @Override
     public double calcularSalario() {
-        return salarioBase;
+        double salarioFinal = salarioBase;
+        return salarioFinal;
+    }
+
+    @Override
+    public double calcularDesconto(double porcentagem) {
+        double salarioSemDesconto = calcularSalario();
+        return salarioSemDesconto - (salarioSemDesconto * porcentagem / 100);
+    }
+
+    // Sobrescrita do toString para incluir o bônus
+    @Override
+    public String toString() {
+        return "Nome: " + nome + ", Cargo: " + getCargo() +
+                ", Salário Base/Total: " + salarioBase +
+                ", Salário com Desconto: " + calcularDesconto(10);
     }
 }
 

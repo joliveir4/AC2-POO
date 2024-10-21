@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14662d8d-a638-4691-97a6-533a5fe17cba" name="Changes" comment="" />
+    <list default="true" id="14662d8d-a638-4691-97a6-533a5fe17cba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AC2/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AC2/entities/Diretor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/entities/Diretor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AC2/entities/Empresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/entities/Empresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AC2/entities/FuncionarioBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/entities/FuncionarioBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AC2/entities/FuncionarioComum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/entities/FuncionarioComum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AC2/entities/Gerente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/entities/Gerente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Descontos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Descontos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Diretor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Diretor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/FuncionarioBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/FuncionarioBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/FuncionarioComum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/FuncionarioComum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Gerente.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,15 +44,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/joao.pereira/IdeaProjects/AC2/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/joao.pereira/IdeaProjects/AC2/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="application" />

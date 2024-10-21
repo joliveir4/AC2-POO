@@ -6,6 +6,10 @@ public class Empresa{
     public String nome;
     private ArrayList<FuncionarioBase> funcionarios;
 
+
+    // Construtor Padrao
+    public Empresa(){}
+
     // Construtor
     public Empresa(String nome) {
         this.nome = nome;
@@ -22,17 +26,17 @@ public class Empresa{
         funcionarios.remove(funcionario);
     }
 
-    // Metodo para calcular a receita total (soma de salários)
+    // Metodo para calcular a soma de salários
     public double calcularSalarioTotal() {
-        double total = 0; // Inicializa a variável total como 0
+        double salarioTotal = 0; // Inicializa a variável total como 0
         for (FuncionarioBase funcionario : funcionarios) {
-            total += funcionario.calcularSalario();
+            salarioTotal += funcionario.calcularSalario();
         }
-        return total;
+        return salarioTotal;
     }
 
-    // Metodo para imprimir os salários e detalhes de todos os funcionários (polimorfismo)
-    public void imprimirSalariosFuncionarios() {
+    // Metodo para imprimir os salários e detalhes de todos os funcionários.
+    public void imprimirInfoFuncionarios() {
         for (FuncionarioBase funcionario : funcionarios) {
             System.out.println(funcionario.toString());
         }

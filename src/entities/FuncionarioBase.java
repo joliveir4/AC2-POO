@@ -18,18 +18,6 @@ public abstract class FuncionarioBase {
     // Metodo abstrato para calcular o salário
     public abstract double calcularSalario();
 
-    // Sobrecarga do metodo calcularSalario para aceitar um desconto
-    public double calcularSalario(double desconto) {
-        return calcularSalario() - desconto;
-    }
-
-
-
-    // Mdtodo para obter detalhes do salário e adicionais (implementado nas subclasses)
-    public String toString() {
-        return "Nome: " + nome + ", Cargo: " + getCargo() + ", Salário Base: " + salarioBase + ", Salário Total: " + calcularSalario();
-    }
-
     // Getters
     public String getNome() {
         return nome;
@@ -42,5 +30,10 @@ public abstract class FuncionarioBase {
     public String getCargo() {
         return this.cargo;
     }
+
+    public String toString() {
+        return "Nome: " + getNome() + ", Cargo: " + getCargo() + ", Salário Base: " + getSalarioBase() + ", Salário Total: " + calcularSalario();
+    }
+
 }
 

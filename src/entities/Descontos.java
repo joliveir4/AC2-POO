@@ -1,5 +1,5 @@
 package entities;
 
 public interface Descontos {
-    double calcularDesconto(double percentual);
+    double calcularDesconto(double porcentagem);
 }

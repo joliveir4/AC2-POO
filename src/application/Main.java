@@ -11,7 +11,7 @@ public class Main {
         String nomeEmpresa = empresa.nome;
 
         // Criando os funcionários
-        FuncionarioComum funcionario = new FuncionarioComum("João", "Funcionario Comum",3000);
+        FuncionarioComum funcionario = new FuncionarioComum("João", "Funcionario Comum",5000);
         Gerente gerente = new Gerente("Kaue","Gerente", 15000, 20);
         Diretor diretor = new Diretor("Gabriel","Diretor", 20000, 10, 2000);
 
@@ -23,7 +23,7 @@ public class Main {
 
         // Imprimindo os salários e detalhes dos funcionários
         System.out.println("Novos colaboradores da " +nomeEmpresa+ ":");
-        empresa.imprimirSalariosFuncionarios();
+        empresa.imprimirInfoFuncionarios();
 
         // Calculando a soma dos salários
         double salarioTotal = empresa.calcularSalarioTotal();
@@ -35,7 +35,7 @@ public class Main {
 
         // Imprimindo os salários e detalhes dos funcionários
         System.out.println("Lista atualizada de colaboradores da " +nomeEmpresa+ ":");
-        empresa.imprimirSalariosFuncionarios();
+        empresa.imprimirInfoFuncionarios();
 
         // Calculando a soma dos salários
         salarioTotal = empresa.calcularSalarioTotal();
