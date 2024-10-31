@@ -1,34 +1,50 @@
 package entities;
 
-public class FuncionarioComum extends FuncionarioBase implements Descontos{
+public class FuncionarioComum extends FuncionarioBase{
+    private double bonusAdicional;
 
     // Construtor Padrao
     public FuncionarioComum(){}
 
-    // Construtor
+    // Construtor com nome,cargo,salarioBase
     public FuncionarioComum(String nome, String cargo, double salarioBase) {
         super(nome,cargo,salarioBase);
+    }
+
+    // Construtor com nome,cargo,salarioBase e bonusAdicional
+    public FuncionarioComum(String nome, String cargo, double salarioBase, double bonusAdicional) {
+        super(nome,cargo,salarioBase);
+        this.bonusAdicional = bonusAdicional;
     }
 
     // Implementação do cálculo de salário sem nenhum ajuste adicional
     @Override
     public double calcularSalario() {
-        double salarioFinal = salarioBase;
+        double salarioFinal = getSalarioBase();
         return salarioFinal;
     }
 
-    @Override
-    public double calcularDesconto(double porcentagem) {
-        double salarioSemDesconto = calcularSalario();
-        return salarioSemDesconto - (salarioSemDesconto * porcentagem / 100);
+    //Sobrecarga do metodo calcularSalario adicionando o parametro bonusAdicional
+    public double calcularSalario(double bonusAdicional) {
+        double salarioFinal = getSalarioBase() + bonusAdicional;
+        return salarioFinal;
+    }
+
+    public double getBonusAdicional() {
+        return this.bonusAdicional;
     }
 
     // Sobrescrita do toString para incluir o bônus
     @Override
     public String toString() {
-        return "Nome: " + nome + ", Cargo: " + getCargo() +
-                ", Salário Base/Total: " + salarioBase +
-                ", Salário com Desconto: " + calcularDesconto(10);
+        return "Nome: " + getNome() + ", Cargo: " + getCargo() +
+                ", Salário Base/Total: " + getSalarioBase();
+    }
+
+    public String toStringComBonus(){
+        return "Nome: " + getNome() + ", Cargo: " + getCargo() +
+                ", Salário Base: " + getSalarioBase() +
+                "Bonus de: R$ " + calcularSalario(getBonusAdicional());
     }
 }
 

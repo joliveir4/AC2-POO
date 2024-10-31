@@ -2,16 +2,15 @@ package entities;
 
 import java.util.ArrayList;
 
-public class Empresa{
+public class Departamento {
     public String nome;
     private ArrayList<FuncionarioBase> funcionarios;
 
-
     // Construtor Padrao
-    public Empresa(){}
+    public Departamento(){}
 
     // Construtor
-    public Empresa(String nome) {
+    public Departamento(String nome) {
         this.nome = nome;
         this.funcionarios = new ArrayList<>();
     }
@@ -26,17 +25,17 @@ public class Empresa{
         funcionarios.remove(funcionario);
     }
 
-    // Metodo para calcular a soma de salários
-    public double calcularSalarioTotal() {
-        double salarioTotal = 0; // Inicializa a variável total como 0
+    // Polimorfismo - Chamo o metodo calcularSalario que está declarado na classe dos funcionarios.
+    public double calcularTotalAPagar() {
+        double totalAPagar = 0;
         for (FuncionarioBase funcionario : funcionarios) {
-            salarioTotal += funcionario.calcularSalario();
+            totalAPagar += funcionario.calcularSalario();
         }
-        return salarioTotal;
+        return totalAPagar;
     }
 
-    // Metodo para imprimir os salários e detalhes de todos os funcionários.
-    public void imprimirInfoFuncionarios() {
+    // Polimorfismo - Chamo o metodo toString que está declarado na classe dos funcionarios.
+    public void imprimirSalariosFuncionarios() {
         for (FuncionarioBase funcionario : funcionarios) {
             System.out.println(funcionario.toString());
         }

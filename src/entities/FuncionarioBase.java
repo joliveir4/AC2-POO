@@ -1,9 +1,9 @@
 package entities;
 
 public abstract class FuncionarioBase {
-    protected String nome;
-    protected String cargo;
-    protected double salarioBase;
+    private String nome;
+    private String cargo;
+    private double salarioBase;
 
     // Construtor Padrao
     public FuncionarioBase() {}

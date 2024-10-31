@@ -1,41 +1,58 @@
 package entities;
 
-public class Diretor extends FuncionarioBase implements Descontos{
+public class Diretor extends FuncionarioBase implements BeneficiosDiretor {
     private double bonusPercentual;
     private double auxilioMoradia;
 
     // Construtor Padrao
-    public Diretor(){}
+    public Diretor() {
+    }
 
     // Construtor
     public Diretor(String nome, String cargo, double salarioBase, double bonusPercentual, double auxilioMoradia) {
-        super(nome,cargo,salarioBase);
+        super(nome, cargo, salarioBase);
         this.bonusPercentual = bonusPercentual;
         this.auxilioMoradia = auxilioMoradia;
     }
 
-    // Calculo de salário com bônus e auxílio-moradia
     @Override
-    public double calcularSalario() {
-        double salarioSemDesconto =  salarioBase + (salarioBase * this.bonusPercentual / 100) + this.auxilioMoradia;
-        return salarioSemDesconto;
+    public double calcularAuxilioMoradia(double valorFixado) {
+        return valorFixado;
     }
 
     @Override
-    public double calcularDesconto(double porcentagem) {
-        double salarioSemDesconto = calcularSalario();
-        return salarioSemDesconto - (salarioSemDesconto * porcentagem / 100);
+    public double calcularBonus(double percentual) {
+        double bonus = getSalarioBase() * percentual / 100;
+        return bonus;
+    }
+
+
+    // Calculo de salário com bônus e auxílio-moradia
+    @Override
+    public double calcularSalario() {
+        double salarioSemDesconto = getSalarioBase() + calcularBonus(bonusPercentual) + calcularAuxilioMoradia(auxilioMoradia);
+        return salarioSemDesconto;
+    }
+
+    public double getAuxilioMoradia() {
+        return this.auxilioMoradia;
+    }
+
+    public double getBonusPercentual() {
+        return this.bonusPercentual;
     }
 
     // Sobrescrita do toString para incluir o bônus e o auxílio-moradia
     @Override
     public String toString() {
-        return "Nome: " + nome + ", Cargo: " + getCargo() +
-                ", Salário Base: " + salarioBase + ", Bônus: " + bonusPercentual + "%" +
-                ", Auxílio-Moradia: " + auxilioMoradia +
-                ", Salário Total: " + calcularSalario() +
-                ", Salario com Descontos: " + calcularDesconto(10);
+        return "Nome: " + getNome() + ", Cargo: " + getCargo() +
+                ", Salário Base: " + getSalarioBase() + ", Bônus: " + getBonusPercentual() + "%" +
+                ", Auxílio-Moradia: " + getAuxilioMoradia() +
+                ", Salário Total: " + calcularSalario();
     }
 
+
 }
+
+
 

@@ -1,6 +1,6 @@
 package entities;
 
-public class Gerente extends FuncionarioBase implements Descontos{
+public class Gerente extends FuncionarioBase implements BeneficiosGerente{
     private double bonusPercentual;
 
     // Construtor Padrao
@@ -12,28 +12,30 @@ public class Gerente extends FuncionarioBase implements Descontos{
         this.bonusPercentual = bonusPercentual;
     }
 
+    @Override
+    public double calcularBonus(double percentual) {
+        double bonus = getSalarioBase() * percentual / 100;
+        return bonus;
+    }
+
     // Implementação do cálculo de salário com bônus
     @Override
     public double calcularSalario() {
-        double salarioSemDesconto = salarioBase + (salarioBase * this.bonusPercentual / 100);
-        return salarioSemDesconto;
+        double salarioFinal = getSalarioBase() + calcularBonus(bonusPercentual);
+        return salarioFinal;
     }
 
-    @Override
-    public double calcularDesconto(double porcentagem) {
-        double salarioSemDesconto = calcularSalario();
-        return salarioSemDesconto - (salarioSemDesconto * porcentagem / 100);
+    public double getBonusPercentual() {
+        return this.bonusPercentual;
     }
 
     // Sobrescrita do toString para incluir o bônus
     @Override
     public String toString() {
-        return "Nome: " + nome + ", Cargo: " + getCargo() +
-                ", Salário Base: " + salarioBase + ", Bônus: " + bonusPercentual + "%"+
-                ", Salário Total: " + calcularSalario() +
-                ", Salario com Descontos: " + calcularDesconto(10);
+        return "Nome: " + getNome() + ", Cargo: " + getCargo() +
+                ", Salário Base: " + getSalarioBase() + ", Bônus: " + getBonusPercentual() + "%"+
+                ", Salário Total: " + calcularSalario();
     }
-
 
 }
 
