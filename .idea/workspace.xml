@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14662d8d-a638-4691-97a6-533a5fe17cba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/entities/BeneficiosDiretor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/BeneficiosGerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AC2/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AC2/entities/Diretor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/entities/Diretor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AC2/entities/FuncionarioBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/entities/FuncionarioBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AC2/entities/FuncionarioComum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/entities/FuncionarioComum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AC2/entities/Gerente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AC2/entities/Gerente.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Descontos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Diretor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Diretor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Departamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/FuncionarioBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/FuncionarioBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/FuncionarioComum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/FuncionarioComum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Gerente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

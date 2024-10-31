@@ -12,13 +12,11 @@ public class Main {
 
         // Criando os funcionários
         FuncionarioComum funcionario = new FuncionarioComum("João", "Funcionario Comum",3000);
-        FuncionarioComum funcionarioComBonus = new FuncionarioComum("Kaue", "Funcionario Comum",3000,300);
         Gerente gerente = new Gerente("Maria","Gerente", 5000 , 20);
         Diretor diretor = new Diretor("Carlos","Diretor", 10000,30 , 2000);
 
         // Adicionando funcionários à empresa
         empresa.adicionarFuncionario(funcionario);
-        empresa.adicionarFuncionario(funcionarioComBonus);
         empresa.adicionarFuncionario(gerente);
         empresa.adicionarFuncionario(diretor);
 
